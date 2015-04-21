@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #ff991e;
 }
 
@@ -16,12 +16,12 @@ h1 {
 .location,
 .time {
   display: block;
-  font-size: 3.125em;
-  line-height: 2.4em;
+  font-size: 3.125em; /* 50px */
+  line-height: 2.4em; /* 120px */
 }
 
 .name {
   display: block;
-  font-size: 7.188em;
-  line-height: 1em;
+  font-size: 7.188em; /* 115px */
+  line-height: 1em;   /* 115px */
 }

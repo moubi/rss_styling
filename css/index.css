@@ -1,15 +1,10 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #ff991e;
-}
-
 h1 {
   font-size: 4.375em;  /* 70px */
   line-height: 1.29em; /* 90px */
   text-align: center;
 }
 
-.details {
+.container {
   padding: 70px 40px 0 40px;
 }
 

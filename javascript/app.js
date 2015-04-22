@@ -1,13 +1,21 @@
 (function() {
+  _options = {
+    feed: 'grupp00.xml',
+    container: '.container'
+  };
+
   function App() {
     this.$items = null;
+    this.options = $.extend({}, _options);
   }
 
-  App.prototype.init = function(rss) {
-    if (!rss) { throw 'RSS feed must be provided' }
+  App.prototype.init = function(options) {
+    if (options) {
+      $.extend(this.options, options);
+    }
 
     $.ajax({
-      url: rss,
+      url: this.options.feed,
       dataType: 'xml',
       success: $.proxy(this.feed, this)
     });
@@ -23,10 +31,14 @@
   };
 
   App.prototype.append = function() {
+    $container = $(this.options.container);
+    $template = $container.children(':first-child');
     i = this.$items.length;
+    items = []
+
     while (i--) {
-      console.log(i);
-      // el = $(el);
+      // $template.clone()
+      // this.$items[i]
     }
   };
 

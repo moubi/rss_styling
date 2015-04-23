@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="custom">
-<channel>
-<item>
-<Unit>00A</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00A</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00B</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00B</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00B</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00B</Row1>
-<Row2>Den här skall synas på två enskilda skärmar</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00D</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00D</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00E</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00E</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00F</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00F</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00G</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00G</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00H</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00H</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00I</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00I</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00J</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00J</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00K</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00K</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00L</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00L</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00M</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00M</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00N</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00N</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00O</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Text rad 1 00O</Row1>
-<Row2>Text rad 2</Row2>
-<Row3>Text rad 3</Row3>
-</item>
-<item>
-<Unit>00P</Unit>
-<TimeStart>1800</TimeStart>
-<TimeEnd>2000</TimeEnd>
-<Date>2015-05-01</Date>
-<Row1>Lång text 00P</Row1>
-<Row2>Med digital skyltning (engelska: digital signage) menar man elektroniska skärmar som finns installerade på *offentliga platser* eller på arbetsplatser. 
+  <channel>
+    <item>
+      <Unit>00A</Unit>
+      <TimeStart>1800</TimeStart>
+      <TimeEnd>2000</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00A</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00B</Unit>
+      <TimeStart>900</TimeStart>
+      <TimeEnd>1000</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00B</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00B</Unit>
+      <TimeStart>1000</TimeStart>
+      <TimeEnd>1100</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00B</Row1>
+      <Row2>Den här skall synas på två enskilda skärmar</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00D</Unit>
+      <TimeStart>1200</TimeStart>
+      <TimeEnd>1300</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00D</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00E</Unit>
+      <TimeStart>1100</TimeStart>
+      <TimeEnd>1250</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00E</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00F</Unit>
+      <TimeStart>1350</TimeStart>
+      <TimeEnd>1450</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00F</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00G</Unit>
+      <TimeStart>1600</TimeStart>
+      <TimeEnd>1700</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00G</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00H</Unit>
+      <TimeStart>1500</TimeStart>
+      <TimeEnd>1600</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00H</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00I</Unit>
+      <TimeStart>1700</TimeStart>
+      <TimeEnd>1800</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00I</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00J</Unit>
+      <TimeStart>1800</TimeStart>
+      <TimeEnd>1900</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00J</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00K</Unit>
+      <TimeStart>1900</TimeStart>
+      <TimeEnd>2000</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00K</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00L</Unit>
+      <TimeStart>2000</TimeStart>
+      <TimeEnd>2100</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00L</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00M</Unit>
+      <TimeStart>2200</TimeStart>
+      <TimeEnd>2300</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00M</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00N</Unit>
+      <TimeStart>2100</TimeStart>
+      <TimeEnd>2200</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00N</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00O</Unit>
+      <TimeStart>1800</TimeStart>
+      <TimeEnd>2000</TimeEnd>
+      <Date>2015-04-23</Date>
+      <Row1>Text rad 1 00O</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+    <item>
+      <Unit>00P</Unit>
+      <TimeStart>1800</TimeStart>
+      <TimeEnd>2000</TimeEnd>
+      <Date>2015-05-01</Date>
+      <Row1>Lång text 00P</Row1>
+      <Row2>Med digital skyltning (engelska: digital signage) menar man elektroniska skärmar som finns installerade på *offentliga platser* eller på arbetsplatser.
 
-Digital skyltning är en form av ljusreklam som används för underhållning, information och marknadsföring. 
+        Digital skyltning är en form av ljusreklam som används för underhållning, information och marknadsföring.
 
-Fördelarna med digitala skyltar jämfört med traditionella skyltar är att innehållet enkelt kan bytas ut och anpassas efter miljö och publik, att man kan visa animeringar och att bildskärmarna kan vara tryckkänsliga och fungera interaktivt. Genom att integrera till exempel köinformation från ett kösystem kan man öka den genomsnittliga tiden en kund tittar på reklamen. Exempel på sådana kombinerade system (butiks-tv och kösystem) kan man till exempel hitta på Ica. </Row2>
-<Row3>Text rad 3</Row3>
-</item>
-</channel>
+        Fördelarna med digitala skyltar jämfört med traditionella skyltar är att innehållet enkelt kan bytas ut och anpassas efter miljö och publik, att man kan visa animeringar och att bildskärmarna kan vara tryckkänsliga och fungera interaktivt. Genom att integrera till exempel köinformation från ett kösystem kan man öka den genomsnittliga tiden en kund tittar på reklamen. Exempel på sådana kombinerade system (butiks-tv och kösystem) kan man till exempel hitta på Ica. </Row2>
+      <Row3>Text rad 3</Row3>
+    </item>
+  </channel>
 </rss>

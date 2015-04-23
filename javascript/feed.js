@@ -10,14 +10,23 @@
     return items;
   };
 
-  Feed.match = function(item, $template) {
-    var $placeholders = $template.children();
+  Feed.match = function(feedItems, $template) {
+    var template = null,
+      length = feedItems.length, i,
+      items = [];
 
-    $placeholders.each(function(index, el) {
-      el = $(el);
-      el.html(item[el.data('rss-tag')]);
-    });
-    return $template;
+    for (i = 0; i < length; i++) {
+      template = $template.clone();
+      template.children().each(function(index, el) {
+        el = $(el);
+        el.html(feedItems[i][el.data('rss-tag')]);
+      });
+
+      template.attr('data-myorder', i+1);
+      items.push(template);
+    }
+
+    return items;
   };
 
   function _todaysItems(array) {

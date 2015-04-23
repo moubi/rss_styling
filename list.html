@@ -10,13 +10,14 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet'>
     <script src='javascript/jquery-1.11.2.min.js'></script>
     <script src='javascript/jquery.xml2json.js'></script>
+    <script src='javascript/jquery.mixitup.js'></script>
     <script src='javascript/feed.js'></script>
     <script src='javascript/app.js'></script>
   </head>
   <body>
     <div id='wrapper'>
       <h1>FIXED TITLE</h1>
-      <div class='container'>
+      <div id='container'>
         <div class='item'>
           <span class='location'>LILLA SALEN - VÅNING 2</span>
           <label class='name'>FÖRETAGETS NAMN FÖRETAGETS NAMN FÖRETAGETS NAMN FÖRETAGETS NAMN</label>
@@ -95,7 +96,7 @@
       </div>
      </div>
      <div class='template'>
-      <div class='item'>
+      <div class='item mix' data-myorder='1'>
         <span data-rss-tag='Row1' class='location'></span>
         <label data-rss-tag='Row2' class='name'></label>
         <p data-rss-tag='Row3' class='time'></p>
@@ -103,7 +104,14 @@
     </div>
     <script>
       $(function() {
-        App.init(Feed);
+        App.init(Feed, function() {
+          $('#container').mixItUp({
+            controls: {
+              enable: false
+            }
+          });
+          $('#container').mixItUp('sort', 'myorder:asc');
+        });
       });
     </script>
   </body>

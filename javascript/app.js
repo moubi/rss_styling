@@ -1,22 +1,20 @@
 (function() {
   var _options = {
     feed: 'grupp00.xml',
-    container: '.container'
+    container: '#container'
   };
 
   var Feed = null;
 
   function App() {
     this.$items = null;
+    this.callback = null;
     this.options = $.extend({}, _options);
   }
 
-  App.prototype.init = function(FeedEngine, options) {
+  App.prototype.init = function(FeedEngine, callback) {
     Feed = FeedEngine;
-
-    if (options) {
-      $.extend(this.options, options);
-    }
+    this.callback = callback;
 
     $.ajax({
       url: this.options.feed,
@@ -37,15 +35,12 @@
   App.prototype.append = function() {
     var $container = $(this.options.container),
       $template = $('.template > .item'),
-      feedItems = Feed.sort(this.$items).reverse(),
-      i = feedItems.length,
-      htmlItems = [];
+      feedItems = Feed.sort(this.$items),
+      htmlItems = Feed.match(feedItems, $template);
 
-    while (i--) {
-      htmlItems.push(Feed.match(feedItems[i], $template.clone()));
-    }
     $container.html('').append(htmlItems);
+    (typeof this.callback === 'function') && this.callback();
   };
 
-  window.App = new App;
+  window.App = new App();
 })();

@@ -1,7 +1,8 @@
 (function() {
   var _options = {
-    feed: 'grupp00.xml',
-    container: '#container'
+    url: 'grupp00.xml',
+    container: '#container',
+    limit: 15
   };
 
   var Feed = null;
@@ -16,27 +17,15 @@
     Feed = FeedEngine;
     this.callback = callback;
 
-    $.ajax({
-      url: this.options.feed,
-      dataType: 'xml',
-      success: $.proxy(this.feed, this)
-    });
-  };
-
-  App.prototype.feed = function(xmlDoc) {
-    var $items = $.xml2json(xmlDoc).channel.item;
-
-    if ($items.length) {
-      this.$items = $items;
-      this.append();
-    }
+    Feed.request(this.options.url);
+    Feed.observe(this.options.url);
+    $(Feed).on(Feed.events.success, $.proxy(this.append, this));
   };
 
   App.prototype.append = function() {
     var $container = $(this.options.container),
       $template = $('.template > .item'),
-      feedItems = Feed.sort(this.$items),
-      htmlItems = Feed.match(feedItems, $template);
+      htmlItems = Feed.match(Feed.items.slice(0, this.options.limit), $template);
 
     $container.html('').append(htmlItems);
     (typeof this.callback === 'function') && this.callback();

@@ -1,66 +1,65 @@
 (function() {
   function Feed() {}
 
-  Feed.events = { success: 'success' };
+  Feed.events = {
+    success: 'success',
+    update: 'update'
+  };
   Feed.items = [];
 
   Feed.sort = function(array) {
     items = _todaysItems(array);
 
     items.sort(function(a, b) {
-      return _time(a.Date + ' ' + a.TimeStart) - _time(b.Date + ' ' + b.TimeStart);
-      // return a.TimeStart - b.TimeStart
+      return Feed.time(a.DateStart + ' ' + a.TimeStart) - Feed.time(b.DateStart + ' ' + b.TimeStart);
     });
     return items;
   };
 
-  Feed.match = function(feedItems, $template) {
-    var template = null,
-      length = feedItems.length, i,
-      items = [];
-
-    for (i = 0; i < length; i++) {
-      template = $template.clone();
-      template.children().each(function(index, el) {
-        el = $(el);
-        el.html(feedItems[i][el.data('rss-tag')]);
-      });
-
-      template.attr('data-myorder', i+1);
-      items.push(template);
-    }
-
-    return items;
-  };
-
   Feed.request = function(url) {
-    $.ajax({ url: url, dataType: 'xml', success: _success });
+    $.ajax({ url: url, dataType: 'xml', success: function(xmlDoc) {
+      Feed.items = Feed.sort(Feed.json(xmlDoc));
+      $(Feed).triggerHandler(Feed.events.success);
+    }});
   };
 
   Feed.observe = function(url) {
     setInterval(function() {
+      $.ajax({ url: url, dataType: 'xml', success: function(xmlDoc) {
+        var itemsCopy = Feed.items.slice(0),
+          feed = Feed.json(xmlDoc);
 
+        Feed.items = Feed.sort(feed);
+        if (!_isEqual(feed, Feed.items)) {
+          // Check if new feed is different than the current one
+          $(Feed).triggerHandler(Feed.events.update);
+        }
+      }});
     }, 60000);
   };
 
-  function _success(xmlDoc) {
-    var items = $.xml2json(xmlDoc).channel.item;
+  Feed.day = function(date) {
+    date = date ? new Date(date) : new Date();
+    return date.setHours(0, 0, 0, 0);
+  };
 
-    if (items.length) {
-      Feed.items = Feed.sort(items);
-      $(Feed).triggerHandler(Feed.events.success);
-    }
+  Feed.time = function(date) {
+    return date ? new Date(date).getTime() : new Date().getTime();
+  };
+
+  Feed.json = function(xmlDoc) {
+    return $.xml2json(xmlDoc).channel.item;
   }
 
   function _todaysItems(array) {
-    var currentDate = _day(),
-      currentTime = _time(),
+    var currentDate = Feed.day(),
+      currentTime = Feed.time(),
       i = array.length,
       todaysItems = [], date, time;
 
     while (i--) {
-      date = _day(array[i].Date);
-      time = _time(array[i].Date + ' ' + array[i].TimeStart);
+      date = Feed.day(array[i].DateStart);
+      time = Feed.time(array[i].DateStart + ' ' + array[i].TimeStart);
 
       if (date == currentDate && time >= currentTime) {
         todaysItems.push(array[i]);
@@ -69,13 +68,8 @@
     return todaysItems;
   };
 
-  function _day(date) {
-    date = date ? new Date(date) : new Date();
-    return date.setHours(0, 0, 0, 0);
-  };
-
-  function _time(date) {
-    return date ? new Date(date).getTime() : new Date().getTime();
+  function _isEqual(feed1, feed2) {
+    return JSON.stringify(feed1[0]) === JSON.stringify(feed2[0]);
   }
 
   window.Feed = Feed;

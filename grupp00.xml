@@ -197,9 +197,19 @@
       <TimeEnd>00:00</TimeEnd>
       <DateStart>2015-04-27</DateStart>
       <DateEnd>2015-04-27</DateEnd>
-      <Row1>Text rad 1 00CC</Row1>
+      <Row1>Text rad 1 00O</Row1>
       <Row2>Text rad 2</Row2>
       <Row3>23:00 - 00:00</Row3>
+    </item>
+    <item>
+      <Unit>00OO</Unit>
+      <TimeStart>00:00</TimeStart>
+      <TimeEnd>01:00</TimeEnd>
+      <DateStart>2015-04-28</DateStart>
+      <DateEnd>2015-04-28</DateEnd>
+      <Row1>Text rad 1 00OO</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>00:00 - 01:00</Row3>
     </item>
     <item>
       <Unit>00P</Unit>

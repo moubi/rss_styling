@@ -47,9 +47,17 @@
     return date ? new Date(date).getTime() : new Date().getTime();
   };
 
+  Feed.hours = function(time) {
+    return new Date(time).getHours();
+  };
+
   Feed.json = function(xmlDoc) {
     return $.xml2json(xmlDoc).channel.item;
   }
+
+  Feed.dayDiff = function(time1, time2) {
+    return Math.ceil((time1 - time2)/(1000*60*60*24));
+  };
 
   function _todaysItems(array) {
     var currentDate = Feed.day(),
@@ -61,7 +69,8 @@
       date = Feed.day(array[i].DateStart);
       time = Feed.time(array[i].DateStart + ' ' + array[i].TimeStart);
 
-      if (date == currentDate && time >= currentTime) {
+      if ((date == currentDate && time >= currentTime)
+          || (Feed.dayDiff(time, currentTime) == 1 && Feed.hours(time) <= 3)) {
         todaysItems.push(array[i]);
       }
     }

@@ -4,9 +4,13 @@ h1 {
   text-align: center;
 }
 
-.container {
+#container {
   width: 100%;
   padding: 30px 0 0 0;
+}
+
+.template {
+  display: none;
 }
 
 .item {

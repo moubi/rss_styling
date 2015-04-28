@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
+  <url>grupp00.xml</url>
   <unit>00A</unit>
   <singlepost>false</singlepost>
   <preshow>60</preshow>
+  <limit>15</limit>
 </config>

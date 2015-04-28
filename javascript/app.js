@@ -1,16 +1,7 @@
 (function() {
   // Default options.
   // These will be overridden by config.xml
-  var _options = {
-    url: 'grupp00.xml',
-    config: 'config.xml',
-    container: '#container',
-    unit: '00',
-    singlepost: false,
-    preshow: 50,
-    limit: 15
-  };
-
+  var _options = { config: 'config.xml' };
   var Feed = null;
 
   function App() {
@@ -23,7 +14,7 @@
   App.prototype.init = function(FeedEngine, callback) {
     Feed = FeedEngine;
     Feed.options = _options;
-    this.$container = $(_options.container);
+    this.$container = $('#container');
     this.$itemTemplate = $('.template > .item');
     this.callback = callback;
 

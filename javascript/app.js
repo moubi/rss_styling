@@ -2,6 +2,7 @@
   var _options = {
     url: 'grupp00.xml',
     container: '#container',
+    unit: '00A',
     limit: 15
   };
 
@@ -15,12 +16,13 @@
 
   App.prototype.init = function(FeedEngine, callback) {
     Feed = FeedEngine;
+    Feed.options = _options;
     this.$container = $(_options.container);
     this.$itemTemplate = $('.template > .item');
     this.callback = callback;
 
-    Feed.request(_options.url);
-    Feed.observe(_options.url);
+    Feed.request();
+    Feed.observe();
     $(Feed).on(Feed.events.success, $.proxy(this.append, this));
     $(Feed).on(Feed.events.update, $.proxy(this.newEvent, this));
   };

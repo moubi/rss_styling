@@ -6,9 +6,10 @@
     update: 'update'
   };
   Feed.items = [];
+  Feed.options = null;
 
-  Feed.sort = function(array) {
-    items = _todaysItems(array);
+  Feed.sort = function(array, unit) {
+    items = _todaysItems(array, unit);
 
     items.sort(function(a, b) {
       return Feed.time(a.DateStart + ' ' + a.TimeStart) - Feed.time(b.DateStart + ' ' + b.TimeStart);
@@ -16,16 +17,16 @@
     return items;
   };
 
-  Feed.request = function(url) {
-    $.ajax({ url: url, dataType: 'xml', success: function(xmlDoc) {
+  Feed.request = function() {
+    $.ajax({ url: Feed.options.url, dataType: 'xml', success: function(xmlDoc) {
       Feed.items = Feed.sort(Feed.json(xmlDoc));
       $(Feed).triggerHandler(Feed.events.success);
     }});
   };
 
-  Feed.observe = function(url) {
+  Feed.observe = function() {
     setInterval(function() {
-      $.ajax({ url: url, dataType: 'xml', success: function(xmlDoc) {
+      $.ajax({ url: Feed.options.url, dataType: 'xml', success: function(xmlDoc) {
         var itemsCopy = Feed.items.slice(0),
           feed = Feed.json(xmlDoc);
 
@@ -59,6 +60,11 @@
     return Math.ceil((time1 - time2)/(1000*60*60*24));
   };
 
+  Feed.unit = function(unit) {
+    if (!isNaN(Feed.options.unit*1)) { return true; }
+    return (unit == Feed.options.unit) || false;
+  };
+
   function _todaysItems(array) {
     var currentDate = Feed.day(),
       currentTime = Feed.time(),
@@ -71,7 +77,9 @@
 
       if ((date == currentDate && time >= currentTime)
           || (Feed.dayDiff(time, currentTime) == 1 && Feed.hours(time) <= 3)) {
-        todaysItems.push(array[i]);
+        if (Feed.unit(array[i].Unit)) {
+          todaysItems.push(array[i]);          
+        }
       }
     }
     return todaysItems;

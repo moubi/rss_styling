@@ -1,8 +1,13 @@
 (function() {
+  // Default options.
+  // These will be overridden by config.xml
   var _options = {
     url: 'grupp00.xml',
+    config: 'config.xml',
     container: '#container',
-    unit: '00A',
+    unit: '00',
+    singlepost: false,
+    preshow: 50,
     limit: 15
   };
 
@@ -12,6 +17,7 @@
     this.$container = null;
     this.$itemTemplate = null;
     this.callback = null;
+    this.config();
   }
 
   App.prototype.init = function(FeedEngine, callback) {
@@ -50,6 +56,12 @@
   App.prototype.newEvent = function() {
     var feedItems = Feed.items.slice(0, _options.limit);
     this.append();
+  };
+
+  App.prototype.config = function() {
+    $.ajax({ url: _options.config, dataType: 'xml', async: false, success: function(xmlDoc) {
+      $.extend(_options, $.xml2json(xmlDoc));
+    }});
   };
 
   function _match($template, item, id) {

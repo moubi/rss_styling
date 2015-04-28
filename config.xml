@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+  <unit>00A</unit>
+  <singlepost>false</singlepost>
+  <preshow>60</preshow>
+</config>

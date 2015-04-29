@@ -1,0 +1,31 @@
+/* List events */
+.item { margin: 2%; }
+
+.location,
+.time {
+  font-size: 0.75em;   /* 12px */
+  line-height: 3.33em; /* 40px */
+}
+
+.name {
+  font-size: 1.625em;  /* 26px */
+  line-height: 1.23em; /* 32px */
+}
+/* /List events */
+
+/* Single event */
+#container.singlepost { padding-top: 100px; }
+
+#container.singlepost .item { margin: 0; }
+
+#container.singlepost .location,
+#container.singlepost .time {
+  font-size: 2.188em;  /* 35px */
+  line-height: 4.29em; /* 150px */
+}
+
+#container.singlepost .name {
+  font-size: 5.625em;  /* 90px */
+  line-height: 1.11em; /* 100px */
+}
+/* /Single event */

@@ -4,19 +4,54 @@ h1 {
   text-align: center;
 }
 
-.container {
-  padding: 70px 40px 0 40px;
+/* List events */
+#container {
+  width: 100%;
+  padding: 30px 0 0 0;
+}
+
+.template { display: none; }
+
+.item {
+  display: inline-block;
+  width: 27%;
+  margin: 1% 3%;
+  vertical-align: top;
 }
 
 .location,
 .time {
   display: block;
-  font-size: 3.125em; /* 50px */
-  line-height: 2.4em; /* 120px */
+  font-size: 0.875em;  /* 14px */
+  line-height: 2.42em; /* 34px */
 }
 
 .name {
   display: block;
+  font-size: 2.188em; /* 35px */
+  line-height: 1em;   /* 35px */
+}
+/* /List events */
+
+/* Single event */
+#container.singlepost { padding: 70px 40px 0 40px; }
+
+#container.singlepost .item {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+#container.singlepost .location,
+#container.singlepost .time {
+  display: block;
+  font-size: 3.125em; /* 50px */
+  line-height: 2.4em; /* 120px */
+}
+
+#container.singlepost .name {
+  display: block;
   font-size: 7.188em; /* 115px */
   line-height: 1em;   /* 115px */
 }
+/* /Single event */

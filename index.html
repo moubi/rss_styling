@@ -2,27 +2,40 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta name='description' content='RSS single event'>
+    <meta name='description' content='RSS event list'>
     <title>RSS feed styling</title>
     <link rel='stylesheet' href='css/reset.css' />
     <link rel='stylesheet' href='css/index.css' />
-    <link rel='stylesheet' href='css/portrait_index.css' media='all and (max-width: 1080px)'>
+    <link rel='stylesheet' href='css/portrait.css' media='all and (max-width: 1080px)'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700,300' rel='stylesheet'>
     <script src='javascript/jquery-1.11.2.min.js'></script>
+    <script src='javascript/jquery.xml2json.js'></script>
+    <script src='javascript/jquery.mixitup.js'></script>
+    <script src='javascript/feed.js'></script>
+    <script src='javascript/app.js'></script>
   </head>
   <body>
     <div id='wrapper'>
       <h1>FIXED TITLE</h1>
-      <div class='container'>
-        <span class='location'>ROOM 53 - 2nd floor</span>
-        <label class='name'>NAME OF EVENT</label>
-        <p class='time'>08:00 - 17:00</p>
-      </div>
+      <div id='container'></div>
      </div>
-
+     <div class='template'>
+      <div class='item mix' data-myorder='1' data-TimeStart='' data-TimeEnd=''>
+        <span data-rss-tag='Row1' class='location'></span>
+        <label data-rss-tag='Row2' class='name'></label>
+        <p data-rss-tag='Row3' class='time'></p>
+      </div>
+    </div>
     <script>
       $(function() {
-        console.log($);
+        App.init(Feed, function() {
+          $('#container').mixItUp({
+            controls: {
+              enable: false
+            }
+          });
+          // $('#container').mixItUp('sort', 'myorder:asc');
+        });
       });
     </script>
   </body>

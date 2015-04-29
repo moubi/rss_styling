@@ -8,8 +8,8 @@
   Feed.items = [];
   Feed.options = null;
 
-  Feed.sort = function(array, unit) {
-    items = _todaysItems(array, unit);
+  Feed.sort = function(array) {
+    items = _todaysItems(array);
 
     items.sort(function(a, b) {
       return Feed.time(a.DateStart + ' ' + a.TimeStart) - Feed.time(b.DateStart + ' ' + b.TimeStart);
@@ -65,6 +65,23 @@
     return (unit == Feed.options.unit) || false;
   };
 
+  Feed.afterMidnight = function(time1, time2) {
+    return (Feed.dayDiff(time1, time2) == 1 && Feed.hours(time1) <= 3);
+  };
+
+  Feed.futureToday = function(date1, date2, time1, time2) {
+    return (date1 == date2 && time1 >= time2);
+  };
+
+  Feed.singlepost = function() {
+    if (typeof Feed.options.singlepost == 'string') {
+      return Feed.options.singlepost == 'true';
+    } else if (typeof Feed.options.singlepost == 'number') {
+      return !!Feed.options.singlepost;
+    }
+    return Feed.options.singlepost;
+  };
+
   function _todaysItems(array) {
     var currentDate = Feed.day(),
       currentTime = Feed.time(),
@@ -75,10 +92,16 @@
       date = Feed.day(array[i].DateStart);
       time = Feed.time(array[i].DateStart + ' ' + array[i].TimeStart);
 
-      if ((date == currentDate && time >= currentTime)
-          || (Feed.dayDiff(time, currentTime) == 1 && Feed.hours(time) <= 3)) {
+      // If it is going to happen today, it is not passed and is of a unit
+      if (Feed.futureToday(date, currentDate, time, currentTime) || Feed.afterMidnight(time, currentTime)) {
         if (Feed.unit(array[i].Unit)) {
-          todaysItems.push(array[i]);          
+          todaysItems.push(array[i]);
+
+          // If it is single post
+          if (Feed.singlepost()) {
+            console.log(Feed.options.singlepost)
+            break;
+          }
         }
       }
     }

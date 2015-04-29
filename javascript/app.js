@@ -28,6 +28,7 @@
     var htmlItems = this.match(Feed.items.slice(0, _options.limit), this.$itemTemplate);
 
     this.$container.html('').append(htmlItems);
+    this.$container.toggleClass('singlepost', Feed.singlepost());
     (typeof this.callback === 'function') && this.callback();
   };
 

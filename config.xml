@@ -3,6 +3,6 @@
   <url>grupp00.xml</url>
   <unit>00</unit>
   <singlepost>true</singlepost>
-  <showalways>true</showalways>
+  <showalways>false</showalways>
   <limit>15</limit>
 </config>

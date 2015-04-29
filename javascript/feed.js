@@ -14,6 +14,16 @@
     items.sort(function(a, b) {
       return Feed.time(a.DateStart + ' ' + a.TimeStart) - Feed.time(b.DateStart + ' ' + b.TimeStart);
     });
+
+    // If it is single post
+    if (Feed.singlepost()) {
+      // If it is to be displayed full day or going to happen now
+      if (Feed.showalways() || Feed.happenNow(items[0])) {
+        items = [items[0]];
+        items[0].singlepost = true;
+      }
+    }
+
     return items;
   };
 
@@ -62,7 +72,7 @@
 
   Feed.unit = function(unit) {
     if (!isNaN(Feed.options.unit*1)) { return true; }
-    return (unit == Feed.options.unit) || false;
+    return unit == Feed.options.unit;
   };
 
   Feed.afterMidnight = function(time1, time2) {
@@ -74,12 +84,19 @@
   };
 
   Feed.singlepost = function() {
-    if (typeof Feed.options.singlepost == 'string') {
-      return Feed.options.singlepost == 'true';
-    } else if (typeof Feed.options.singlepost == 'number') {
-      return !!Feed.options.singlepost;
-    }
-    return Feed.options.singlepost;
+    return Feed.options.singlepost == 'true';
+  };
+
+  Feed.showalways = function() {
+    return Feed.options.showalways == 'true';
+  };
+
+  Feed.happenNow = function(ev) {
+    var eventDate = new Date(ev.DateStart + ' ' + ev.TimeStart),
+      diff = Math.abs(Math.round((eventDate - new Date())/6000));
+
+    // 5 min before or after event start time
+    return diff <= 5;
   };
 
   function _todaysItems(array) {
@@ -96,12 +113,6 @@
       if (Feed.futureToday(date, currentDate, time, currentTime) || Feed.afterMidnight(time, currentTime)) {
         if (Feed.unit(array[i].Unit)) {
           todaysItems.push(array[i]);
-
-          // If it is single post
-          if (Feed.singlepost()) {
-            console.log(Feed.options.singlepost)
-            break;
-          }
         }
       }
     }

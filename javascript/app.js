@@ -27,7 +27,13 @@
   App.prototype.append = function() {
     var htmlItems = this.match(Feed.items.slice(0, _options.limit), this.$itemTemplate);
 
+    htmlItems = _shuffle(htmlItems);
     this.$container.html('').append(htmlItems);
+
+    // if (!!!Feed.items[0].singlepost) {
+    //   $('#container').mixItUp('sort', 'myorder:asc');
+    // }
+
     this.$container.toggleClass('singlepost', !!Feed.items[0].singlepost);
     (typeof this.callback === 'function') && this.callback();
   };
@@ -69,6 +75,20 @@
       'data-DateStart': item.DateStart
     });
     return $template;
+  }
+
+  function _shuffle(array) {
+    var j, i, temp, length = array.length;
+    array = array.slice(0);
+
+    for (var i = array.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+
+    return array;
   }
 
   window.App = new App();

@@ -26,7 +26,6 @@
 
   App.prototype.append = function() {
     var htmlItems = this.match(Feed.items.slice(0, _options.limit), this.$itemTemplate);
-
     htmlItems = _shuffle(htmlItems);
 
     this.$container.html('').append(htmlItems);

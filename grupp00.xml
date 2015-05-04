@@ -2,7 +2,8 @@
 <rss version="custom">
   <channel>
     <item>
-      <Unit>00A</Unit>
+      <Unit>A</Unit>
+      <Unit>B</Unit>
       <TimeStart>18:00</TimeStart>
       <TimeEnd>20:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -12,7 +13,7 @@
       <Row3>18:00 - 20:00</Row3>
     </item>
     <item>
-      <Unit>00B</Unit>
+      <Unit>B</Unit>
       <TimeStart>9:00</TimeStart>
       <TimeEnd>10:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -22,7 +23,7 @@
       <Row3>9:00 - 10:00</Row3>
     </item>
     <item>
-      <Unit>00B</Unit>
+      <Unit>B</Unit>
       <TimeStart>10:00</TimeStart>
       <TimeEnd>11:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -32,7 +33,7 @@
       <Row3>10:00 - 11:00</Row3>
     </item>
     <item>
-      <Unit>00D</Unit>
+      <Unit>D</Unit>
       <TimeStart>12:00</TimeStart>
       <TimeEnd>13:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -42,7 +43,7 @@
       <Row3>12:00 - 13:00</Row3>
     </item>
     <item>
-      <Unit>00E</Unit>
+      <Unit>E</Unit>
       <TimeStart>11:00</TimeStart>
       <TimeEnd>12:30</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -52,7 +53,7 @@
       <Row3>11:00 - 12:30</Row3>
     </item>
     <item>
-      <Unit>00F</Unit>
+      <Unit>F</Unit>
       <TimeStart>13:30</TimeStart>
       <TimeEnd>14:30</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -62,7 +63,7 @@
       <Row3>13:30 - 14:30</Row3>
     </item>
     <item>
-      <Unit>00G</Unit>
+      <Unit>G</Unit>
       <TimeStart>16:00</TimeStart>
       <TimeEnd>17:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -72,7 +73,7 @@
       <Row3>16:00 - 17:00</Row3>
     </item>
     <item>
-      <Unit>00H</Unit>
+      <Unit>H</Unit>
       <TimeStart>15:00</TimeStart>
       <TimeEnd>16:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -82,7 +83,7 @@
       <Row3>15:00 - 16:00</Row3>
     </item>
     <item>
-      <Unit>00A</Unit>
+      <Unit>A</Unit>
       <TimeStart>17:00</TimeStart>
       <TimeEnd>18:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -92,7 +93,7 @@
       <Row3>17:00 - 18:00</Row3>
     </item>
     <item>
-      <Unit>00A</Unit>
+      <Unit>A</Unit>
       <TimeStart>18:00</TimeStart>
       <TimeEnd>19:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -102,7 +103,7 @@
       <Row3>18:00 - 19:00</Row3>
     </item>
     <item>
-      <Unit>00K</Unit>
+      <Unit>K</Unit>
       <TimeStart>19:00</TimeStart>
       <TimeEnd>20:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -112,7 +113,7 @@
       <Row3>19:00 - 20:00</Row3>
     </item>
     <item>
-      <Unit>00L</Unit>
+      <Unit>L</Unit>
       <TimeStart>20:00</TimeStart>
       <TimeEnd>21:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -122,7 +123,7 @@
       <Row3>20:00 - 21:00</Row3>
     </item>
     <item>
-      <Unit>00M</Unit>
+      <Unit>M</Unit>
       <TimeStart>22:00</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -132,7 +133,7 @@
       <Row3>22:00 - 23:00</Row3>
     </item>
     <item>
-      <Unit>00N</Unit>
+      <Unit>N</Unit>
       <TimeStart>21:00</TimeStart>
       <TimeEnd>22:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -142,7 +143,7 @@
       <Row3>21:00 - 22:00</Row3>
     </item>
     <item>
-      <Unit>00Z</Unit>
+      <Unit>Z</Unit>
       <TimeStart>21:00</TimeStart>
       <TimeEnd>22:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -152,7 +153,7 @@
       <Row3>21:00 - 22:00</Row3>
     </item>
     <item>
-      <Unit>00Y</Unit>
+      <Unit>Y</Unit>
       <TimeStart>21:00</TimeStart>
       <TimeEnd>22:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -162,7 +163,7 @@
       <Row3>Text rad 3 | 13</Row3>
     </item>
     <item>
-      <Unit>00O</Unit>
+      <Unit>O</Unit>
       <TimeStart>22:30</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -172,7 +173,7 @@
       <Row3>22:30 - 23:00</Row3>
     </item>
     <item>
-      <Unit>00Q</Unit>
+      <Unit>Q</Unit>
       <TimeStart>22:30</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -182,7 +183,7 @@
       <Row3>22:30 - 23:00</Row3>
     </item>
     <item>
-      <Unit>00P</Unit>
+      <Unit>P</Unit>
       <TimeStart>22:30</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -192,7 +193,7 @@
       <Row3>22:30 - 23:00</Row3>
     </item>
     <item>
-      <Unit>00O</Unit>
+      <Unit>O</Unit>
       <TimeStart>23:00</TimeStart>
       <TimeEnd>00:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -202,7 +203,7 @@
       <Row3>23:00 - 00:00</Row3>
     </item>
     <item>
-      <Unit>00OO</Unit>
+      <Unit>OO</Unit>
       <TimeStart>00:00</TimeStart>
       <TimeEnd>01:00</TimeEnd>
       <DateStart>2015-05-04</DateStart>
@@ -212,7 +213,7 @@
       <Row3>00:00 - 01:00</Row3>
     </item>
     <item>
-      <Unit>00P</Unit>
+      <Unit>P</Unit>
       <TimeStart>18:00</TimeStart>
       <TimeEnd>20:00</TimeEnd>
       <DateStart>2015-04-28</DateStart>

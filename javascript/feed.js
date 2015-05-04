@@ -71,7 +71,18 @@
   };
 
   Feed.unit = function(unit) {
-    if (!isNaN(Feed.options.unit*1)) { return true; }
+    if (!Feed.options.unit) { return true; }
+
+    // Event belongs to several units
+    if (unit.length) {
+      var i = unit.length;
+      while (i--) {
+        if (unit[i] == Feed.options.unit) {
+          return true;
+        }
+      }
+      return false;
+    }
     return unit == Feed.options.unit;
   };
 

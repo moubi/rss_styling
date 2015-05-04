@@ -41,7 +41,7 @@
           feed = Feed.json(xmlDoc);
 
         Feed.items = Feed.sort(feed);
-        if (!_isEqual(feed, Feed.items)) {
+        if (!_isEqual(itemsCopy, Feed.items)) {
           // Check if new feed is different than the current one
           $(Feed).triggerHandler(Feed.events.update);
         }

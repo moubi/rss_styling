@@ -28,13 +28,11 @@
     </div>
     <script>
       $(function() {
-        App.init(Feed, function() {
-          $('#container').mixItUp({
-            controls: {
-              enable: false
-            }
-          });
-          // $('#container').mixItUp('sort', 'myorder:asc');
+        App.init(Feed, function(isSingleEvent) {
+          if (!isSingleEvent) {
+            $('#container').mixItUp({ controls: { enable: false } });
+            $('#container').mixItUp('sort', 'myorder:asc');
+          }
         });
       });
     </script>

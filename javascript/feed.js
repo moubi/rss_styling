@@ -16,7 +16,7 @@
     });
 
     // If it is single post
-    if (Feed.singlepost()) {
+    if (Feed.singlepost() && items.length) {
       // If it is to be displayed full day or going to happen now
       if (Feed.showalways() || Feed.happenNow(items[0])) {
         items = [items[0]];

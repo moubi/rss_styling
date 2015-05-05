@@ -25,12 +25,14 @@
   };
 
   App.prototype.append = function() {
-    var htmlItems = this.match(Feed.items.slice(0, _options.limit), this.$itemTemplate);
-    htmlItems = _shuffle(htmlItems);
+    if (Feed.items.length) {
+      var htmlItems = this.match(Feed.items.slice(0, _options.limit), this.$itemTemplate);
+      htmlItems = _shuffle(htmlItems);
 
-    this.$container.html('').append(htmlItems);
-    this.$container.toggleClass('singlepost', !!Feed.items[0].singlepost);
-    (typeof this.callback === 'function') && this.callback(!!Feed.items[0].singlepost);
+      this.$container.html('').append(htmlItems);
+      this.$container.toggleClass('singlepost', !!Feed.items[0].singlepost);
+      (typeof this.callback === 'function') && this.callback(!!Feed.items[0].singlepost);
+    }
   };
 
   App.prototype.match = function(feedItems, $template) {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-  <!-- <url>grupp00.xml</url> -->
-  <url>https://54.165.164.32/notice/rss/17?password=nNPOP</url>
+  <url>grupp00.xml</url>
+  <!-- <url>https://54.165.164.32/notice/rss/17?password=nNPOP</url> -->
   <unit>A</unit>
-  <singlepost>true</singlepost>
+  <singlepost>false</singlepost>
   <showalways>false</showalways>
   <limit>15</limit>
 </config>

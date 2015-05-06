@@ -12,7 +12,7 @@
     items = _todaysItems(array);
 
     items.sort(function(a, b) {
-      return Feed.time(a.DateStart + ' ' + a.TimeStart) - Feed.time(b.DateStart + ' ' + b.TimeStart);
+      return parseInt(a.TimeStart.replace(':', '')) - parseInt(b.TimeStart.replace(':', ''));
     });
 
     // If it is single post
@@ -62,6 +62,10 @@
     return new Date(time).getHours();
   };
 
+  Feed.setHours = function(date, hours) {
+    return date.setHours.apply(date, hours);
+  };
+
   Feed.json = function(xmlDoc) {
     return $.xml2json(xmlDoc).channel.item;
   }
@@ -90,8 +94,8 @@
     return (Feed.dayDiff(time1, time2) == 1 && Feed.hours(time1) <= 3);
   };
 
-  Feed.futureToday = function(date1, date2, time1, time2) {
-    return (date1 == date2 && time1 >= time2);
+  Feed.futureToday = function(date1, date2, time1, time2, time3) {
+    return (date1 == date2 && (time1 >= time2 || time1 < time2 && time2 < time3));
   };
 
   Feed.singlepost = function() {
@@ -102,26 +106,37 @@
     return Feed.options.showalways == 'true';
   };
 
-  Feed.happenNow = function(ev) {
-    var eventDate = new Date(ev.DateStart + ' ' + ev.TimeStart),
-      diff = Math.abs(Math.round((eventDate - new Date())/6000));
+  Feed.happenNow = function(item) {
+    var timeStart = Feed.setHours(new Date(), item.TimeStart.split(':')),
+      timeEnd = Feed.setHours(new Date(), item.TimeEnd.split(':')),
+      diff = Math.abs(Math.round((timeStart - new Date())/6000)),
+      diffEnd = Math.round((timeEnd - new Date())/6000);
 
-    // 5 min before or after event start time
-    return diff <= 5;
+    // 5 min before or after event start time or between start and end time
+    return diff <= 5 || (diff > 0 && diffEnd >= 0);
   };
 
   function _todaysItems(array) {
     var currentDate = Feed.day(),
       currentTime = Feed.time(),
       i = array.length,
-      todaysItems = [], date, time;
+      todaysItems = [], dateStart, timeStart, dateEnd;
 
     while (i--) {
-      date = Feed.day(array[i].DateStart);
-      time = Feed.time(array[i].DateStart + ' ' + array[i].TimeStart);
+      dateStart = Feed.day(array[i].DateStart);
+      dateEnd = Feed.day(array[i].DateEnd);
+      timeStart = Feed.time(array[i].DateStart + ' ' + array[i].TimeStart);
+      timeEnd = Feed.time(array[i].DateStart + ' ' + array[i].TimeEnd);
+
+      // If current date is between DateStart and DateEnd
+      if (currentDate <= dateEnd && currentDate >= dateStart) {
+        dateStart = currentDate;
+        timeStart = Feed.setHours(new Date(currentDate), array[i].TimeStart.split(':'));
+        timeEnd = Feed.setHours(new Date(currentDate), array[i].TimeEnd.split(':'));
+      }
 
       // If it is going to happen today, it is not passed and is of a unit
-      if (Feed.futureToday(date, currentDate, time, currentTime) || Feed.afterMidnight(time, currentTime)) {
+      if (Feed.futureToday(dateStart, currentDate, timeStart, currentTime, timeEnd) || Feed.afterMidnight(timeStart, currentTime)) {
         if (Feed.unit(array[i].Unit)) {
           todaysItems.push(array[i]);
         }

@@ -14,6 +14,7 @@
     </item>
     <item>
       <Unit>B</Unit>
+      <Unit>A</Unit>
       <TimeStart>9:00</TimeStart>
       <TimeEnd>10:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -24,6 +25,7 @@
     </item>
     <item>
       <Unit>B</Unit>
+      <Unit>A</Unit>
       <TimeStart>10:00</TimeStart>
       <TimeEnd>11:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -34,6 +36,7 @@
     </item>
     <item>
       <Unit>D</Unit>
+      <Unit>A</Unit>
       <TimeStart>12:00</TimeStart>
       <TimeEnd>13:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -44,6 +47,7 @@
     </item>
     <item>
       <Unit>E</Unit>
+      <Unit>A</Unit>
       <TimeStart>11:00</TimeStart>
       <TimeEnd>12:30</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -54,6 +58,7 @@
     </item>
     <item>
       <Unit>F</Unit>
+      <Unit>A</Unit>
       <TimeStart>13:30</TimeStart>
       <TimeEnd>14:30</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -64,6 +69,7 @@
     </item>
     <item>
       <Unit>G</Unit>
+      <Unit>A</Unit>
       <TimeStart>16:00</TimeStart>
       <TimeEnd>17:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -74,6 +80,7 @@
     </item>
     <item>
       <Unit>H</Unit>
+      <Unit>A</Unit>
       <TimeStart>15:00</TimeStart>
       <TimeEnd>16:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -83,6 +90,7 @@
       <Row3>15:00 - 16:00</Row3>
     </item>
     <item>
+      <Unit>A</Unit>
       <Unit>A</Unit>
       <TimeStart>17:00</TimeStart>
       <TimeEnd>18:00</TimeEnd>
@@ -94,16 +102,18 @@
     </item>
     <item>
       <Unit>A</Unit>
+      <Unit>A</Unit>
       <TimeStart>18:00</TimeStart>
-      <TimeEnd>19:00</TimeEnd>
+      <TimeEnd>19:30</TimeEnd>
       <DateStart>2015-05-05</DateStart>
       <DateEnd>2015-05-22</DateEnd>
       <Row1>Text rad 1 00A</Row1>
       <Row2>Text rad 2</Row2>
-      <Row3>18:00 - 19:00</Row3>
+      <Row3>18:00 - 19:30</Row3>
     </item>
     <item>
       <Unit>K</Unit>
+      <Unit>A</Unit>
       <TimeStart>19:00</TimeStart>
       <TimeEnd>20:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -114,6 +124,7 @@
     </item>
     <item>
       <Unit>L</Unit>
+      <Unit>A</Unit>
       <TimeStart>20:00</TimeStart>
       <TimeEnd>21:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -124,6 +135,7 @@
     </item>
     <item>
       <Unit>M</Unit>
+      <Unit>A</Unit>
       <TimeStart>22:00</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -134,6 +146,7 @@
     </item>
     <item>
       <Unit>N</Unit>
+      <Unit>A</Unit>
       <TimeStart>21:00</TimeStart>
       <TimeEnd>22:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -144,6 +157,7 @@
     </item>
     <item>
       <Unit>Z</Unit>
+      <Unit>A</Unit>
       <TimeStart>21:00</TimeStart>
       <TimeEnd>22:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -154,16 +168,18 @@
     </item>
     <item>
       <Unit>Y</Unit>
+      <Unit>A</Unit>
       <TimeStart>21:00</TimeStart>
       <TimeEnd>22:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
       <DateEnd>2015-05-22</DateEnd>
       <Row1>Text rad 1 00Y</Row1>
       <Row2>Text rad 2</Row2>
-      <Row3>Text rad 3 | 13</Row3>
+      <Row3>21:00 - 22:00</Row3>
     </item>
     <item>
       <Unit>O</Unit>
+      <Unit>A</Unit>
       <TimeStart>22:30</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -174,6 +190,7 @@
     </item>
     <item>
       <Unit>Q</Unit>
+      <Unit>A</Unit>
       <TimeStart>22:30</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -184,6 +201,7 @@
     </item>
     <item>
       <Unit>P</Unit>
+      <Unit>A</Unit>
       <TimeStart>22:30</TimeStart>
       <TimeEnd>23:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -194,6 +212,7 @@
     </item>
     <item>
       <Unit>O</Unit>
+      <Unit>A</Unit>
       <TimeStart>23:00</TimeStart>
       <TimeEnd>00:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
@@ -204,6 +223,7 @@
     </item>
     <item>
       <Unit>OO</Unit>
+      <Unit>A</Unit>
       <TimeStart>00:00</TimeStart>
       <TimeEnd>01:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>

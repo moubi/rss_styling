@@ -37,11 +37,11 @@
   Feed.observe = function() {
     setInterval(function() {
       $.ajax({ url: Feed.options.url, dataType: 'xml', success: function(xmlDoc) {
-        var itemsCopy = Feed.items.slice(0),
+        var itemsCopy = Feed.items.slice(0, Feed.options.limit),
           feed = Feed.json(xmlDoc);
 
         Feed.items = Feed.sort(feed);
-        if (!_isEqual(itemsCopy, Feed.items)) {
+        if (!_isEqual(itemsCopy, Feed.items.slice(0, Feed.options.limit))) {
           // Check if new feed is different than the current one
           $(Feed).triggerHandler(Feed.events.update);
         }
@@ -146,7 +146,7 @@
   };
 
   function _isEqual(feed1, feed2) {
-    return JSON.stringify(feed1[0]) === JSON.stringify(feed2[0]);
+    return JSON.stringify(feed1) === JSON.stringify(feed2);
   }
 
   window.Feed = Feed;

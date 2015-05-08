@@ -75,19 +75,26 @@
   };
 
   Feed.unit = function(unit) {
-    if (!Feed.options.unit) { return true; }
+    // No unit configured
+    if (!Feed.options.unit) {
+      return true;
 
-    // Event belongs to several units
-    if (unit.length) {
-      var i = unit.length;
-      while (i--) {
-        if (unit[i] == Feed.options.unit) {
-          return true;
-        }
+    // Several units configured
+    } else if (Feed.options.unit.length) {
+      if (unit.length) {
+        return $.grep(unit, function(el, i) {
+          return $.inArray(el, Feed.options.unit) !== -1;
+        }).length > 0;
       }
-      return false;
+      return $.inArray(unit, Feed.options.unit);
+
+    // Single unit configured
+    } else {
+      if (unit.length) {
+        return $.inArray(Feed.options.unit, unit);
+      }
+      return unit == Feed.options.unit;
     }
-    return unit == Feed.options.unit;
   };
 
   Feed.afterMidnight = function(time1, time2) {

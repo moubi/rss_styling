@@ -233,6 +233,17 @@
       <Row3>00:00 - 01:00</Row3>
     </item>
     <item>
+      <Unit>OO</Unit>
+      <Unit>A</Unit>
+      <TimeStart>01:00</TimeStart>
+      <TimeEnd>02:00</TimeEnd>
+      <DateStart>2015-05-05</DateStart>
+      <DateEnd>2015-05-22</DateEnd>
+      <Row1>Text rad 1 00OO</Row1>
+      <Row2>Text rad 2</Row2>
+      <Row3>01:00 - 02:00</Row3>
+    </item>
+    <item>
       <Unit>P</Unit>
       <TimeStart>18:00</TimeStart>
       <TimeEnd>20:00</TimeEnd>

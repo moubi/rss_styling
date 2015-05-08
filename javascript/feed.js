@@ -82,9 +82,9 @@
     // Several units configured
     } else if (Feed.options.unit.length) {
       if (unit.length) {
-        return $.grep(unit, function(el, i) {
+        return ($.grep(unit, function(el, i) {
           return $.inArray(el, Feed.options.unit) !== -1;
-        }).length > 0;
+        }).length > 0);
       }
       return $.inArray(unit, Feed.options.unit);
 
@@ -98,10 +98,10 @@
   };
 
   Feed.afterMidnight = function(time1, time2) {
-    return (Feed.dayDiff(time1, time2) == 1 && Feed.hours(time1) <= 3);
+    return (Feed.dayDiff(time1, time2) == 1 && Feed.hours(time1) <= Feed.options.aftermidnight);
   };
 
-  Feed.futureToday = function(date1, date2, time1, time2, time3) {
+  Feed.laterToday = function(date1, date2, time1, time2, time3) {
     return (date1 == date2 && (time1 >= time2 || time1 < time2 && time2 < time3));
   };
 
@@ -111,6 +111,10 @@
 
   Feed.showalways = function() {
     return Feed.options.showalways == 'true';
+  };
+
+  Feed.nextDayDate = function(date) {
+    return date.setDate(date.getDate() + 1);
   };
 
   Feed.happenNow = function(item) {
@@ -126,24 +130,30 @@
   function _todaysItems(array) {
     var currentDate = Feed.day(),
       currentTime = Feed.time(),
-      i = array.length,
-      todaysItems = [], dateStart, timeStart, dateEnd;
+      i = array.length, todaysItems = [],
+      dateStart, timeStart, dateEnd, nextDay;
 
     while (i--) {
       dateStart = Feed.day(array[i].DateStart);
       dateEnd = Feed.day(array[i].DateEnd);
       timeStart = Feed.time(array[i].DateStart + ' ' + array[i].TimeStart);
       timeEnd = Feed.time(array[i].DateStart + ' ' + array[i].TimeEnd);
+      nextDay = timeStart;
 
       // If current date is between DateStart and DateEnd
       if (currentDate <= dateEnd && currentDate >= dateStart) {
         dateStart = currentDate;
         timeStart = Feed.setHours(new Date(currentDate), array[i].TimeStart.split(':'));
         timeEnd = Feed.setHours(new Date(currentDate), array[i].TimeEnd.split(':'));
+        nextDay = timeStart;
+
+        if (currentDate < dateEnd) {
+          nextDay = Feed.time(Feed.nextDayDate(new Date(timeStart)));
+        }
       }
 
       // If it is going to happen today, it is not passed and is of a unit
-      if (Feed.futureToday(dateStart, currentDate, timeStart, currentTime, timeEnd) || Feed.afterMidnight(timeStart, currentTime)) {
+      if (Feed.laterToday(dateStart, currentDate, timeStart, currentTime, timeEnd) || Feed.afterMidnight(nextDay, currentTime)) {
         if (Feed.unit(array[i].Unit)) {
           todaysItems.push(array[i]);
         }

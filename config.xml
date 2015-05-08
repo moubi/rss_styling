@@ -3,8 +3,9 @@
   <url>grupp00.xml</url>
   <!-- <url>https://54.165.164.32/notice/rss/17?password=nNPOP</url> -->
   <unit>D</unit>
-  <unit>K</unit>
+  <unit>OO</unit>
   <singlepost>false</singlepost>
   <showalways>false</showalways>
+  <aftermidnight>3</aftermidnight>
   <limit>15</limit>
 </config>

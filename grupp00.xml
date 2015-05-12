@@ -26,13 +26,13 @@
     <item>
       <Unit>B</Unit>
       <Unit>A</Unit>
-      <TimeStart>10:00</TimeStart>
-      <TimeEnd>11:00</TimeEnd>
+      <TimeStart>12:00</TimeStart>
+      <TimeEnd>13:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
-      <DateEnd>2015-05-22</DateEnd>
+      <DateEnd>2015-05-12</DateEnd>
       <Row1>Text rad 1 00B</Row1>
       <Row2>Den här skall synas på två enskilda skärmar</Row2>
-      <Row3>10:00 - 11:00</Row3>
+      <Row3>12:00 - 13:00</Row3>
     </item>
     <item>
       <Unit>D</Unit>

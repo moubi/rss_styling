@@ -101,10 +101,6 @@
     return (Feed.dayDiff(time1, time2) == 1 && Feed.hours(time1) <= Feed.options.aftermidnight);
   };
 
-  Feed.laterToday = function(date1, date2, time1, time2, time3) {
-    return (date1 == date2 && (time1 >= time2 || time1 < time2 && time2 < time3));
-  };
-
   Feed.singlepost = function() {
     return Feed.options.singlepost == 'true';
   };
@@ -131,30 +127,17 @@
     var currentDate = Feed.day(),
       currentTime = Feed.time(),
       i = array.length, todaysItems = [],
-      dateStart, timeStart, dateEnd, nextDay;
+      dateStart, timeStart, dateEnd;
 
     while (i--) {
       dateStart = Feed.day(array[i].DateStart);
       dateEnd = Feed.day(array[i].DateEnd);
       timeStart = Feed.time(array[i].DateStart + ' ' + array[i].TimeStart);
-      timeEnd = Feed.time(array[i].DateStart + ' ' + array[i].TimeEnd);
-      nextDay = timeStart;
-
-      // If current date is between DateStart and DateEnd
-      if (currentDate <= dateEnd && currentDate >= dateStart) {
-        dateStart = currentDate;
-        timeStart = Feed.setHours(new Date(currentDate), array[i].TimeStart.split(':'));
-        timeEnd = Feed.setHours(new Date(currentDate), array[i].TimeEnd.split(':'));
-        nextDay = timeStart;
-
-        if (currentDate < dateEnd) {
-          nextDay = Feed.time(Feed.nextDayDate(new Date(timeStart)));
-        }
-      }
+      timeEnd = Feed.time(array[i].DateEnd + ' ' + array[i].TimeEnd);
 
       // If it is going to happen today and it is not passed
-      if (Feed.laterToday(dateStart, currentDate, timeStart, currentTime, timeEnd)
-        || Feed.afterMidnight(nextDay, currentTime)) {
+      if ((currentTime >= timeStart && currentTime <= timeEnd)
+        || Feed.afterMidnight(timeStart, currentTime)) {
         // If it is of a unit
         if (Feed.unit(array[i].Unit)) {
           todaysItems.push(array[i]);

@@ -152,8 +152,10 @@
         }
       }
 
-      // If it is going to happen today, it is not passed and is of a unit
-      if (Feed.laterToday(dateStart, currentDate, timeStart, currentTime, timeEnd) || Feed.afterMidnight(nextDay, currentTime)) {
+      // If it is going to happen today and it is not passed
+      if (Feed.laterToday(dateStart, currentDate, timeStart, currentTime, timeEnd)
+        || Feed.afterMidnight(nextDay, currentTime)) {
+        // If it is of a unit
         if (Feed.unit(array[i].Unit)) {
           todaysItems.push(array[i]);
         }

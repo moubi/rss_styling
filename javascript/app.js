@@ -6,8 +6,8 @@
 
   var CLASSES = {
     LIST: 'list',
-    SINGLEPOST: 'singlepost',
-    GRID: 'grid'
+    SPECIAL: 'special',
+    SINGLEPOST: 'singlepost'
   };
 
   function App() {

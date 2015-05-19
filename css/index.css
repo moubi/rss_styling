@@ -37,6 +37,32 @@ h1 {
   line-height: 1em;   /* 35px */
 }
 
+  /* Special list */
+#container.special .item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#container.special .location { display: none; }
+
+#container.special .name {
+  display: inline-block;
+  width: 70%;
+  font-size: 3.125em; /* 50px */
+  line-height: 1.6em; /* 80px */
+}
+
+#container.special .time {
+  display: inline-block;
+  width: 29%;
+  font-size: 3.125em; /* 50px */
+  line-height: 1.6em; /* 80px */
+  text-align: right;
+}
+  /* /Special list */
+
   /* Simple list */
 #container.list .item {
   display: block;

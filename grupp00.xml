@@ -8,7 +8,7 @@
       <TimeEnd>20:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
       <DateEnd>2015-05-22</DateEnd>
-      <Row1>Text rad 1 00A</Row1>
+      <Row1>2</Row1>
       <Row2>Text rad 2</Row2>
       <Row3>18:00 - 20:00</Row3>
     </item>
@@ -19,7 +19,7 @@
       <TimeEnd>10:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
       <DateEnd>2015-05-22</DateEnd>
-      <Row1>Text rad 1 00B</Row1>
+      <Row1>2</Row1>
       <Row2>Text rad 2</Row2>
       <Row3>9:00 - 10:00</Row3>
     </item>
@@ -41,7 +41,7 @@
       <TimeEnd>13:00</TimeEnd>
       <DateStart>2015-05-05</DateStart>
       <DateEnd>2015-05-22</DateEnd>
-      <Row1>Text rad 1 00D</Row1>
+      <Row1>3</Row1>
       <Row2>Text rad 2</Row2>
       <Row3>12:00 - 13:00</Row3>
     </item>

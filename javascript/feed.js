@@ -11,9 +11,7 @@
   Feed.sort = function(array) {
     items = _todaysItems(array);
 
-    items.sort(function(a, b) {
-      return parseInt(a.TimeStart.replace(':', '')) - parseInt(b.TimeStart.replace(':', ''));
-    });
+    _sort(items);
 
     // If it is single post
     if (Feed.singlepost() && items.length) {
@@ -122,6 +120,34 @@
     // 5 min before or after event start time or between start and end time
     return diff <= 5 || (diff > 0 && diffEnd >= 0);
   };
+
+  function _sort(array) {
+    if (Feed.options.template == 'special') {
+      return _weightItems(array, 'date');
+    } else {
+      return _weightItems(array, 'order');
+    }
+  }
+
+  function _weightItems(array, by) {
+    if (by == 'date') {
+      array.sort(function(a, b) {
+        return parseInt(a.TimeStart.replace(':', '')) - parseInt(b.TimeStart.replace(':', ''));
+      });
+
+    } else {
+      array.sort(function(a, b) {
+        return (parseInt(a.Row1) < parseInt(b.Row1)) ? -1 : 1;
+      });
+      array.sort(function(a, b) {
+        if (parseInt(a.Row1) == parseInt(b.Row1)) {
+          return parseInt(a.TimeStart.replace(':', '')) - parseInt(b.TimeStart.replace(':', ''));
+        } else {
+          return 0;
+        }
+      });
+    }
+  }
 
   function _todaysItems(array) {
     var currentDate = Feed.day(),

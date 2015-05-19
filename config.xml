@@ -2,8 +2,8 @@
 <config>
   <url>grupp00.xml</url>
   <!-- <url>https://54.165.164.32/notice/rss/17?password=nNPOP</url> -->
-  <template>list</template>
-  <unit>A</unit>
+  <template>special</template>
+  <unit>D</unit>
   <unit>B</unit>
   <singlepost>false</singlepost>
   <showalways>false</showalways>

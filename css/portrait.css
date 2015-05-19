@@ -12,10 +12,20 @@
   line-height: 1.23em; /* 32px */
 }
 
-  /* Simple list */
-#container.list .item {
-  padding: 2%;
+  /* Special list */
+#container.special .name {
+  font-size: 2.188em; /* 35px */
+  line-height: 2.86em; /* 100px */
 }
+
+#container.special .time {
+  font-size: 2.188em; /* 35px */
+  line-height: 2.86em; /* 100px */
+}
+  /* /Special list */
+
+  /* Simple list */
+#container.list .item { padding: 1%; }
 
 #container.list .location,
 #container.list .time {

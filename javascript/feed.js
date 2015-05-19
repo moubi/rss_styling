@@ -123,9 +123,9 @@
 
   function _sort(array) {
     if (Feed.options.template == 'special') {
-      return _weightItems(array, 'date');
+      return _weightItems(array, 'weight');
     } else {
-      return _weightItems(array, 'order');
+      return _weightItems(array, 'date');
     }
   }
 

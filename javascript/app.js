@@ -4,6 +4,12 @@
   var _options = { config: 'config.xml' };
   var Feed = null;
 
+  var CLASSES = {
+    LIST: 'list',
+    SINGLEPOST: 'singlepost',
+    GRID: 'grid'
+  };
+
   function App() {
     this.$container = null;
     this.$itemTemplate = null;
@@ -30,7 +36,7 @@
       htmlItems = _shuffle(htmlItems);
 
       this.$container.html('').append(htmlItems);
-      this.$container.toggleClass('singlepost', !!Feed.items[0].singlepost);
+      this.layout();
       (typeof this.callback === 'function') && this.callback(!!Feed.items[0].singlepost);
     }
   };
@@ -57,6 +63,16 @@
     $.ajax({ url: _options.config, dataType: 'xml', async: false, success: function(xmlDoc) {
       $.extend(_options, $.xml2json(xmlDoc));
     }});
+  };
+
+  App.prototype.layout = function() {
+    if (!!Feed.items[0].singlepost) {
+      this.$container.addClass(CLASSES.SINGLEPOST);
+      return ;
+    }
+
+    this.$container.removeClass();
+    this.$container.addClass(CLASSES[_options.template.toUpperCase()]);
   };
 
   function _match($template, item, id) {

@@ -36,6 +36,27 @@ h1 {
   font-size: 2.188em; /* 35px */
   line-height: 1em;   /* 35px */
 }
+
+  /* Simple list */
+#container.list .item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 2%;
+  vertical-align: middle;
+}
+
+#container.list .location,
+#container.list .time {
+  font-size: 1.875em; /* 30px */
+  line-height: 1.33em; /* 40px */
+}
+
+#container.list .name {
+  font-size: 3.75em; /* 60px */
+  line-height: 1.17em; /* 70px */
+}
+  /* /Simple list */
 /* /List events */
 
 /* Single event */
@@ -49,13 +70,11 @@ h1 {
 
 #container.singlepost .location,
 #container.singlepost .time {
-  display: block;
   font-size: 3.125em; /* 50px */
   line-height: 2.4em; /* 120px */
 }
 
 #container.singlepost .name {
-  display: block;
   font-size: 7.188em; /* 115px */
   line-height: 1em;   /* 115px */
 }

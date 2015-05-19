@@ -11,6 +11,23 @@
   font-size: 1.625em;  /* 26px */
   line-height: 1.23em; /* 32px */
 }
+
+  /* Simple list */
+#container.list .item {
+  padding: 2%;
+}
+
+#container.list .location,
+#container.list .time {
+  font-size: 2.188em; /* 35px */
+  line-height: 1.43em; /* 50px */
+}
+
+#container.list .name {
+  font-size: 4.375em; /* 70px */
+  line-height: 1.14em; /* 80px */
+}
+  /* /Simple list */
 /* /List events */
 
 /* Single event */

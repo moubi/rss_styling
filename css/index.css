@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  height: 1080px;
   background: url(../files/bg.jpg) no-repeat 50% 50% fixed;
 }
 
@@ -7,6 +8,11 @@ h1 {
   font-size: 4.375em;  /* 70px */
   line-height: 1.29em; /* 90px */
   text-align: center;
+}
+
+#wrapper {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* List events */
@@ -69,7 +75,7 @@ h1 {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 2% 5%;
+  padding: 0 5%;
   vertical-align: middle;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -77,13 +83,13 @@ h1 {
 
 #container.list .location,
 #container.list .time {
-  font-size: 1.875em; /* 30px */
-  line-height: 1.33em; /* 40px */
+  font-size: 2.5em; /* 40px */
+  line-height: 1.33em; /* 53px */
 }
 
 #container.list .name {
-  font-size: 3.75em; /* 60px */
-  line-height: 1.17em; /* 70px */
+  font-size: 4.375em; /* 70px */
+  line-height: 1.17em; /* 82px */
 }
   /* /Simple list */
 /* /List events */

@@ -1,3 +1,7 @@
+body {
+  height: 1920px;
+}
+
 /* List events */
 .item { margin: 2%; }
 

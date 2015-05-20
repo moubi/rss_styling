@@ -3,6 +3,7 @@
   // These will be overridden by config.xml
   var _options = { config: 'config.xml' };
   var Feed = null;
+  var Grid = null;
 
   var CLASSES = {
     LIST: 'list',
@@ -18,12 +19,14 @@
     this.config();
   }
 
-  App.prototype.init = function(FeedEngine, callback) {
-    Feed = FeedEngine;
-    Feed.options = _options;
+  App.prototype.init = function(GridEngine, FeedEngine, callback) {
     this.$container = $('#container');
     this.$itemTemplate = $('.template > .item');
     this.callback = callback;
+    Feed = FeedEngine;
+    Grid = GridEngine;
+    Grid.$container = this.$container;
+    Feed.options = _options;
 
     Feed.request();
     Feed.observe();
@@ -74,6 +77,7 @@
 
     this.$container.removeClass();
     this.$container.addClass(CLASSES[_options.template.toUpperCase()]);
+    new Grid(Feed.items.slice(0, _options.limit).length, _options.template);
   };
 
   function _match($template, item, id) {

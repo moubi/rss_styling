@@ -12,6 +12,7 @@
     <script src='javascript/jquery.xml2json.js'></script>
     <script src='javascript/jquery.mixitup.js'></script>
     <script src='javascript/feed.js'></script>
+    <script src='javascript/grid.js'></script>
     <script src='javascript/app.js'></script>
   </head>
   <body>
@@ -28,7 +29,7 @@
     </div>
     <script>
       $(function() {
-        App.init(Feed, function(isSingleEvent) {
+        App.init(Grid, Feed, function(isSingleEvent) {
           if (!isSingleEvent) {
             $('#container').mixItUp({ controls: { enable: false } });
             $('#container').mixItUp('sort', 'myorder:asc');

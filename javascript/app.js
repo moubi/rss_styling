@@ -7,6 +7,7 @@
   var CLASSES = {
     LIST: 'list',
     SPECIAL: 'special',
+    DEFAULT: 'default',
     SINGLEPOST: 'singlepost'
   };
 

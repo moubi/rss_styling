@@ -24,15 +24,16 @@
       padding = 510/this.length,
       fontSize = 1500/this.length - (105 - 7*this.length) + '%';
 
-      if (this.length <= 4 && this.length > 1) {
-        width = '43%';
+      if (this.length <= 4) {
+        width = Grid.$container.width() > 1080 ? '43%' : '100%';
         padding = padding - 30 * (5 - this.length);
         fontSize = parseInt(fontSize) - (100 * (5 - this.length)) + '%';
 
-      } else {
-        width = '100%';
-        padding = 180;
-        fontSize = '350%';
+        if (this.length == 1) {
+          width = '100%';
+          padding = 180;
+          fontSize = '350%';
+        }
       }
     }
 

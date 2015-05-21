@@ -12,7 +12,6 @@
   <template>special</template>
   <unit>A</unit>
   <unit>B</unit>
-  <singlepost>false</singlepost>
   <showalways>false</showalways>
   <aftermidnight>3</aftermidnight>
   <limit>15</limit>

@@ -30,10 +30,8 @@
     <script>
       $(function() {
         App.init(Grid, Feed, function(isSingleEvent) {
-          if (!isSingleEvent) {
-            $('#container').mixItUp({ controls: { enable: false } });
-            $('#container').mixItUp('sort', 'myorder:asc');
-          }
+          $('#container').mixItUp({ controls: { enable: false } });
+          $('#container').mixItUp('sort', 'myorder:asc');
         });
       });
     </script>

@@ -8,8 +8,7 @@
   var CLASSES = {
     LIST: 'list',
     SPECIAL: 'special',
-    DEFAULT: 'default',
-    SINGLEPOST: 'singlepost'
+    DEFAULT: 'default'
   };
 
   function App() {
@@ -41,7 +40,7 @@
 
       this.$container.html('').append(htmlItems);
       this.layout();
-      (typeof this.callback === 'function') && this.callback(!!Feed.items[0].singlepost);
+      (typeof this.callback === 'function') && this.callback();
     }
   };
 
@@ -70,11 +69,6 @@
   };
 
   App.prototype.layout = function() {
-    if (!!Feed.items[0].singlepost) {
-      this.$container.addClass(CLASSES.SINGLEPOST);
-      return ;
-    }
-
     this.$container.removeClass();
     this.$container.addClass(CLASSES[_options.template.toUpperCase()]);
     new Grid(Feed.items.slice(0, _options.limit).length, _options.template);

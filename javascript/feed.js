@@ -14,11 +14,10 @@
     _sort(items);
 
     // If it is single post
-    if (Feed.singlepost() && items.length) {
+    if (items.length) {
       // If it is to be displayed full day or going to happen now
       if (Feed.showalways() || Feed.happenNow(items[0])) {
         items = [items[0]];
-        items[0].singlepost = true;
       }
     }
 
@@ -97,10 +96,6 @@
 
   Feed.afterMidnight = function(time1, time2) {
     return (Feed.dayDiff(time1, time2) == 1 && Feed.hours(time1) <= Feed.options.aftermidnight);
-  };
-
-  Feed.singlepost = function() {
-    return Feed.options.singlepost == 'true';
   };
 
   Feed.showalways = function() {

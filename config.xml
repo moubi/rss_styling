@@ -13,5 +13,5 @@
   <unit>B</unit>
   <showalways>false</showalways>
   <aftermidnight>3</aftermidnight>
-  <limit>15</limit>
+  <limit>1</limit>
 </config>

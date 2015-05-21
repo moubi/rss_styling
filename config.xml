@@ -7,9 +7,8 @@
     1) list: 15 in vertical, 7 in horizontal
     2) special: 15 in vertical, 7 in horizontal
     3) default: 15 in vertical, 15 in horizontal
-    4) dynamic: 15 in vertical, 15 in horizontal
   -->
-  <template>special</template>
+  <template>default</template>
   <unit>A</unit>
   <unit>B</unit>
   <showalways>false</showalways>

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
   <url>grupp00.xml</url>
-  <!-- <url>https://54.165.164.32/notice/rss/17?password=nNPOP</url> -->
-  <template>list</template>
+  <!-- Possible values: default, list, special, dynamic_grid -->
+  <!--
+    Events that fit into different template layouts:
+    1) list: 15 in vertical, 7 in horizontal
+    2) special: 15 in vertical, 7 in horizontal
+    3) default: 15 in vertical, 15 in horizontal
+    4) dynamic: 15 in vertical, 15 in horizontal
+  -->
+  <template>special</template>
   <unit>A</unit>
   <unit>B</unit>
   <singlepost>false</singlepost>
   <showalways>false</showalways>
   <aftermidnight>3</aftermidnight>
-  <limit>15</limit>
+  <limit>2</limit>
 </config>

@@ -48,7 +48,7 @@ h1 {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 2% 5%;
+  padding: 0 5%;
   vertical-align: middle;
 }
 
@@ -64,8 +64,8 @@ h1 {
 #container.special .time {
   display: inline-block;
   width: 26%;
-  font-size: 2.25em; /* 36px */
-  line-height: 1.56em; /* 56px */
+  font-size: 1.75em; /* 28px */
+  line-height: 2em; /* 56px */
   text-align: right;
 }
   /* /Special list */

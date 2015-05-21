@@ -23,6 +23,7 @@ h1 {
 
 .template { display: none; }
 
+  /* Dynamic grid aka default grid*/
 .item {
   display: inline-block;
   width: 27%;
@@ -42,6 +43,7 @@ h1 {
   font-size: 2.188em; /* 35px */
   line-height: 1em;   /* 35px */
 }
+  /* /Dynamic grid */
 
   /* Special list */
 #container.special .item {

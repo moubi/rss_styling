@@ -15,5 +15,5 @@
   <singlepost>false</singlepost>
   <showalways>false</showalways>
   <aftermidnight>3</aftermidnight>
-  <limit>2</limit>
+  <limit>15</limit>
 </config>

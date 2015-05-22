@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-  <url>grupp00.xml</url>
+  <url>production.xml</url>
   <!-- Possible values: default, list, special, dynamic_grid -->
   <!--
     Events that fit into different template layouts:
@@ -8,10 +8,10 @@
     2) special: 15 in vertical, 7 in horizontal
     3) default: 15 in vertical, 15 in horizontal
   -->
-  <template>default</template>
+  <template>list</template>
   <unit>A</unit>
   <unit>B</unit>
   <showalways>false</showalways>
   <aftermidnight>3</aftermidnight>
-  <limit>1</limit>
+  <limit>15</limit>
 </config>

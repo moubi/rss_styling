@@ -16,9 +16,21 @@
       padding = 380/this.length,
       fontSize = 555/this.length - (15 - this.length) + '%';
 
+      if (this.length == 1) {
+        width = '100%';
+        padding = 180;
+        fontSize = '200%';
+      }
+
     } else if (this.type == 'special') {
       padding = 450/this.length,
       fontSize = 15*(6 + 15/this.length) + '%';
+
+      if (this.length == 1) {
+        width = '100%';
+        padding = 180;
+        fontSize = '200%';
+      }
 
     } else {
       padding = 510/this.length,

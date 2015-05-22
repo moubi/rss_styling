@@ -1,0 +1,107 @@
+<rss version="custom">
+  <channel>
+    <item>
+      <Unit>A</Unit>
+      <Unit>B</Unit>
+      <Unit>C</Unit>
+      <Unit>D</Unit>
+      <TimeStart>01:02</TimeStart>
+      <TimeEnd>21:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-23</DateEnd>
+      <Row1>In the big auditorium</Row1>
+      <Row2>Information about Swedish food and drinks</Row2>
+      <Row3>Monday to friday all day</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>09:00</TimeStart>
+      <TimeEnd>08:32</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-23</DateEnd>
+      <Row1>1</Row1>
+      <Row2>This is number 1</Row2>
+      <Row3>12 kr</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>09:00</TimeStart>
+      <TimeEnd>21:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-21</DateEnd>
+      <Row1>2</Row1>
+      <Row2>This is number 2</Row2>
+      <Row3>55 kr</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>22:00</TimeStart>
+      <TimeEnd>23:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-20</DateEnd>
+      <Row1>Test</Row1>
+      <Row2>Test</Row2>
+      <Row3>Test</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>22:00</TimeStart>
+      <TimeEnd>23:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-20</DateEnd>
+      <Row1>0</Row1>
+      <Row2>Menyrad</Row2>
+      <Row3>33 kr</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>22:00</TimeStart>
+      <TimeEnd>08:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-21</DateEnd>
+      <Row1>nästa</Row1>
+      <Row2>kommer</Row2>
+      <Row3>här</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>22:00</TimeStart>
+      <TimeEnd>22:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-22</DateEnd>
+      <Row1>Objekt 5</Row1>
+      <Row2>Här kommer ett femte</Row2>
+      <Row3>lite text</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>08:00</TimeStart>
+      <TimeEnd>08:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-27</DateEnd>
+      <Row1>nytt</Row1>
+      <Row2>nytt</Row2>
+      <Row3>nytt</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>08:00</TimeStart>
+      <TimeEnd>08:00</TimeEnd>
+      <DateStart>2015-05-20</DateStart>
+      <DateEnd>2015-05-27</DateEnd>
+      <Row1>mer</Row1>
+      <Row2>mer</Row2>
+      <Row3>mer</Row3>
+    </item>
+    <item>
+      <Unit>A</Unit>
+      <TimeStart>08:00</TimeStart>
+      <TimeEnd>20:00</TimeEnd>
+      <DateStart>2015-05-22</DateStart>
+      <DateEnd>2015-05-23</DateEnd>
+      <Row1>In the master room</Row1>
+      <Row2>Film studio information</Row2>
+      <Row3>08:00-20:00</Row3>
+    </item>
+  </channel>
+</rss>

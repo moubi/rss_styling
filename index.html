@@ -29,7 +29,7 @@
     </div>
     <script>
       $(function() {
-        App.init(Grid, Feed, function(isSingleEvent) {
+        App.init(Grid, Feed, function() {
           $('#container').mixItUp({ controls: { enable: false } });
           $('#container').mixItUp('sort', 'myorder:asc');
         });

@@ -102,10 +102,6 @@
     return Feed.options.showalways == 'true';
   };
 
-  Feed.nextDayDate = function(date) {
-    return date.setDate(date.getDate() + 1);
-  };
-
   Feed.happenNow = function(item) {
     var timeStart = Feed.setHours(new Date(), item.TimeStart.split(':')),
       timeEnd = Feed.setHours(new Date(), item.TimeEnd.split(':')),
@@ -145,8 +141,7 @@
   }
 
   function _todaysItems(array) {
-    var currentDate = Feed.day(),
-      currentTime = Feed.time(),
+    var currentTime = Feed.time(),
       i = array.length, todaysItems = [],
       dateStart, timeStart, dateEnd;
 
